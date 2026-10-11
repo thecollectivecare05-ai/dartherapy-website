@@ -1,0 +1,22 @@
+# DARTherapy ABA — legacy 301 redirects
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force HTTPS + non-www (adjust to preference)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Legacy duplicate pages -> canonical
+Redirect 301 /services-en-espanol/ /es/servicios/
+Redirect 301 /contact-2/ /contact/
+Redirect 301 /careers-2/ /careers/
+
+# Old resources structure
+Redirect 301 /resources/ /blog/
+
+# index.php cleanup
+RewriteCond %{THE_REQUEST} \s/+index\.php [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
