@@ -233,6 +233,12 @@ body.modal-open{overflow:hidden}
 .menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
 @media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
 
+/* form success / error states */
+.form-success{background:var(--teal-tint);border:1px solid #bfe3e0;border-radius:var(--radius);padding:30px 26px;text-align:center}
+.form-success .fs-check{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;font-size:1.45rem;line-height:46px;margin:0 auto 14px;font-weight:700}
+.form-success p{margin:0;color:var(--ink);font-weight:600;font-size:1.02rem}
+.form-error{color:var(--coral-dark);font-weight:600;margin-top:12px}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "@id": "https://dartherapyaba.com/#business", "name": "DARTherapy ABA", "description": "Applied Behavior Analysis (ABA) therapy and parent training for children with autism and developmental disorders, led by a Board Certified Behavior Analyst (BCBA). In-home, school-based and community-based services across South Florida, in English and Spanish.", "url": "https://dartherapyaba.com/", "telephone": "+17869105979", "faxNumber": "+17869541809", "email": "daniel@dartherapyaba.com", "medicalSpecialty": "Applied Behavior Analysis", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "3339 NW 55th St", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33309", "addressCountry": "US"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:30"}], "founder": {"@type": "Person", "name": "Daniel Rivas", "jobTitle": "Board Certified Behavior Analyst (BCBA)"}, "availableLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/dartherapy3/"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "School-Based ABA Therapy", "name": "School-Based ABA Therapy", "description": "School-based ABA brings individualized behavioral support into the learning environment — helping your child build the attention, communication and social skills that make the school day a success.", "provider": {"@id": "https://dartherapyaba.com/#business"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "availableLanguage": ["en", "es"], "url": "https://dartherapyaba.com/school-based-aba-therapy/"}</script>
@@ -343,13 +349,16 @@ body.modal-open{overflow:hidden}
 <button class="modal-close" type="button" aria-label="Close">&times;</button>
 <h3>Request a free consultation</h3>
 <p class="form-note" style="margin-bottom:18px">Tell us a little about your child and we'll respond within one business day.</p>
-<form action="#" method="post" novalidate>
+<form action="https://formsubmit.co/r.mehran@envisionmdrcm.com" method="POST" data-ajax="1" data-thanks="Thank you! Your consultation request has been sent — our team will get back to you within one business day." novalidate>
+<input type="hidden" name="_subject" value="New consultation request — DARTherapy website">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
 <div class="field two"><div><label>Parent / Guardian name</label><input type="text" name="name" required></div><div><label>Phone</label><input type="tel" name="phone" required></div></div>
 <div class="field two"><div><label>Email</label><input type="email" name="email" required></div><div><label>Child's age</label><input type="text" name="child_age"></div></div>
 <div class="field two"><div><label>Service of interest</label><select name="service"><option>In-Home ABA Therapy</option><option>School-Based ABA Therapy</option><option>Community-Based ABA</option><option>Parent Training</option><option>ABA Assessment & FBA</option><option>Not sure yet</option></select></div><div><label>Insurance</label><select name="insurance"><option>Aetna</option><option>Cigna</option><option>Blue Cross Blue Shield (BCBS)</option><option>Other (non-Medicaid)</option><option>Private pay / Self-pay</option></select></div></div>
 <div class="field two"><div><label>Preferred days</label><input type="text" name="days" placeholder="e.g. Weekday mornings"></div><div><label>Preferred language</label><select name="language"><option>English</option><option>Spanish</option><option>Either</option></select></div></div>
 <div class="field"><label>Anything else we should know?</label><textarea name="message" rows="3"></textarea></div>
-<input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
 <button type="submit" class="btn btn-primary">Request consultation</button>
 </form></div></div>
 <script>
@@ -400,6 +409,33 @@ body.modal-open{overflow:hidden}
     var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
     if(hit){ li.classList.add('is-active');
       var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
+  });
+})();
+
+// FormSubmit AJAX forms (non-file forms submit without leaving the page)
+(function(){
+  var ENDPOINT='https://formsubmit.co/ajax/r.mehran@envisionmdrcm.com';
+  document.querySelectorAll('form[data-ajax]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var hp=f.querySelector('[name="_honey"]'); if(hp&&hp.value) return;
+      var btn=f.querySelector('[type=submit]'); var orig=btn?btn.innerHTML:'';
+      if(btn){btn.disabled=true;btn.innerHTML='Sending…';}
+      fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+        .then(function(r){return r.json();})
+        .then(function(){
+          var msg=f.getAttribute('data-thanks')||'Thank you! Your message has been sent.';
+          var box=document.createElement('div'); box.className='form-success';
+          box.innerHTML='<div class="fs-check">✓</div><p>'+msg+'</p>';
+          f.parentNode.replaceChild(box,f);
+        })
+        .catch(function(){
+          if(btn){btn.disabled=false;btn.innerHTML=orig;}
+          var err=f.querySelector('.form-error');
+          if(!err){err=document.createElement('p');err.className='form-error';f.appendChild(err);}
+          err.textContent='Sorry, something went wrong. Please call (786) 910-5979 or email daniel@dartherapyaba.com.';
+        });
+    });
   });
 })();
 
