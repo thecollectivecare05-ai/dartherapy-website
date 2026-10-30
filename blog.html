@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ABA Therapy Resources &amp; Blog | DARTherapy ABA</title>
-<meta name="description" content="Parent-friendly articles on ABA therapy, autism, insurance and supporting your child — from DARTherapy ABA&#x27;s bilingual, BCBA-led team in South Florida.">
+<meta name="description" content="Parent-friendly articles on ABA therapy, autism, early intervention and supporting your child — from DARTherapy ABA&#x27;s bilingual, BCBA-led team in South Florida.">
 <link rel="canonical" href="https://dartherapyaba.com/blog/">
 <link rel="alternate" hreflang="en" href="https://dartherapyaba.com/blog/">
 <link rel="alternate" hreflang="es" href="https://dartherapyaba.com/es/recursos/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="ABA Therapy Resources &amp; Blog | DARTherapy ABA">
-<meta property="og:description" content="Parent-friendly articles on ABA therapy, autism, insurance and supporting your child — from DARTherapy ABA&#x27;s bilingual, BCBA-led team in South Florida.">
+<meta property="og:description" content="Parent-friendly articles on ABA therapy, autism, early intervention and supporting your child — from DARTherapy ABA&#x27;s bilingual, BCBA-led team in South Florida.">
 <meta property="og:url" content="https://dartherapyaba.com/blog/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23137A78'/%3E%3Cpath d='M16 23c-5-3.2-8-6-8-9.5A4.5 4.5 0 0 1 16 10a4.5 4.5 0 0 1 8 3.5C24 17 21 19.8 16 23z' fill='%23FF6F59'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -217,6 +217,22 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
   footer .fgrid{grid-template-columns:1fr}
 }
 
+/* ===== Header CTA fix + Consultation modal ===== */
+.nav-cta .btn-primary{white-space:nowrap;padding:.62em 1.25em;font-size:.92rem;line-height:1.15}
+.modal-overlay{position:fixed;inset:0;background:rgba(16,42,44,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:40px 16px;overflow:auto}
+.modal-overlay.open{display:flex}
+body.modal-open{overflow:hidden}
+.modal{background:#fff;border-radius:20px;max-width:640px;width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.45);position:relative;padding:30px 30px 28px;margin:auto}
+.modal h3{margin-top:0;margin-bottom:.25em}
+.modal-close{position:absolute;top:13px;right:15px;background:var(--teal-tint);border:0;width:38px;height:38px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--teal-dark);transition:.15s}
+.modal-close:hover{background:var(--teal);color:#fff}
+@media(max-width:760px){.modal{padding:24px 18px}}
+
+/* active nav indicator */
+.menu>li.is-active>a,.menu>li.is-active>button{color:var(--teal-dark);background:var(--teal-tint);position:relative}
+.menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
+@media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "@id": "https://dartherapyaba.com/#business", "name": "DARTherapy ABA", "description": "Applied Behavior Analysis (ABA) therapy and parent training for children with autism and developmental disorders, led by a Board Certified Behavior Analyst (BCBA). In-home, school-based and community-based services across South Florida, in English and Spanish.", "url": "https://dartherapyaba.com/", "telephone": "+17869105979", "faxNumber": "+17869541809", "email": "daniel@dartherapyaba.com", "medicalSpecialty": "Applied Behavior Analysis", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "3339 NW 55th St", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33309", "addressCountry": "US"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:30"}], "founder": {"@type": "Person", "name": "Daniel Rivas", "jobTitle": "Board Certified Behavior Analyst (BCBA)"}, "availableLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/dartherapy3/"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dartherapyaba.com/"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dartherapyaba.com/blog/"}]}</script>
@@ -240,7 +256,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </ul>
 <div class="nav-cta">
 <span class="nav-phone">(786) 910-5979</span>
-<a href="contact.html" class="btn btn-primary">Free Consultation</a>
+<button type="button" class="btn btn-primary" data-open-consult>Free Consultation</button>
 <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav></header>
 
@@ -249,40 +265,250 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <span>Resources</span></nav>
 <span class="eyebrow">Resources &amp; Blog</span>
 <h1>Guidance for families on the ABA journey</h1>
-<p class="lead" style="max-width:60ch">Practical, parent-friendly articles on ABA therapy, autism, insurance and supporting your child — written by our bilingual, BCBA-led team.</p>
+<p class="lead" style="max-width:60ch">Practical, parent-friendly articles on ABA therapy, autism, early intervention and supporting your child — written by our bilingual, BCBA-led team.</p>
 </div></div></div>
 <section><div class="wrap">
 <div class="center" style="max-width:60ch"><span class="eyebrow">Latest articles</span><h2>From the DARTherapy blog</h2></div>
-<div class="grid g3" style="margin-top:34px"><a class="card link-card" href="blog-understanding-reinforcement.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1581998392741-67879e0ef04a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent encouraging a child with praise" style="width:100%;height:170px;object-fit:cover;display:block">
+<div class="grid g3" style="margin-top:34px"><a class="card link-card" href="blog-evidence-based-practices-in-aba-therapy.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A behaviour analyst reviewing progress data" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Evidence-Based Practices in ABA Therapy</h3>
+<p style="color:var(--muted);font-size:.95rem">What 'evidence-based' really means in ABA — how research, data and ongoing assessment combine to build interventions that are effective, ethical and tailored to each child.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-understanding-reinforcement.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1581998392741-67879e0ef04a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent encouraging a child with praise" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">Understanding Reinforcement: The Key to Encouraging Positive Behavior</h3>
 <p style="color:var(--muted);font-size:.95rem">What reinforcement is and how parents can use it to encourage positive behaviour at home.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-how-behavior-analysts-make-clinical-decisions.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1596997000103-e597b3ca50df?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A behaviour analyst analysing data to guide a decision" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">How Behavior Analysts Make Clinical Decisions</h3>
+<p style="color:var(--muted);font-size:.95rem">Behind every ABA plan is careful decision-making. Here's how BCBAs combine assessment, ethics, family collaboration and data to choose the right support.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-toddler-skills.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A toddler practising a daily self-help task" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Building Toddler Skills With ABA: Social and Self-Help</h3>
+<p style="color:var(--muted);font-size:.95rem">How ABA helps toddlers build independence in daily tasks and learn social skills through everyday moments like sharing and taking turns.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-foundations-for-learning.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A young child engaged in a hands-on learning activity" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">ABA Foundations for Learning: Building Skills That Last</h3>
+<p style="color:var(--muted);font-size:.95rem">How early ABA support builds the foundational skills — communication, social interaction and problem-solving — that set children up to keep learning.</p>
 <span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-advocate-for-your-child.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent meeting with a teacher in a classroom" style="width:100%;height:170px;object-fit:cover;display:block">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent meeting with a teacher in a classroom" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">How to Advocate for Your Child in School and Therapy Settings</h3>
 <p style="color:var(--muted);font-size:.95rem">Practical ways to be your child's strongest advocate at school and in therapy — confidently and collaboratively.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-early-signs-of-autism.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent observing their young child at play" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Early Signs of Autism: What to Watch For</h3>
+<p style="color:var(--muted);font-size:.95rem">Noticing early signs of autism can matter a great deal. Here's what to watch for — calmly, without panic — and the steps to take if signs persist.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-therapy-explained.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A therapist working one-to-one with a young child at home" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">ABA Therapy Explained: How It Helps Children Grow</h3>
+<p style="color:var(--muted);font-size:.95rem">A clear, parent-friendly look at what ABA therapy is, how positive reinforcement works, and why parent involvement makes such a difference.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-the-difference-between-aba-therapy-and-other-support-services.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A team of therapists collaborating on a child's support plan" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">ABA vs. Other Support Services: How They Work Together</h3>
+<p style="color:var(--muted);font-size:.95rem">How does ABA compare with cognitive and speech therapy — and how can they work together? A clear look at building the right personalised support system.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-communication-skills-aba.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1504151932400-72d4384f04b3?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and child playing and talking together" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Communication</span>
+<h3 style="margin:12px 0 .3em">Building Communication Skills Through Play-Based ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Games, pretend play and everyday moments can teach communication. Here's how play-based ABA builds self-expression — and makes wonderful family memories along the way.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-therapy-myths.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and child smiling during a relaxed therapy activity" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Common Myths About ABA Therapy — and the Truth</h3>
+<p style="color:var(--muted);font-size:.95rem">Misconceptions about ABA can stop families from getting help. Here are some of the most common myths — and what modern, compassionate ABA really looks like.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-language-development.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A caregiver and child talking and playing together" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Communication</span>
+<h3 style="margin:12px 0 .3em">How ABA Therapy Supports Language Development</h3>
+<p style="color:var(--muted);font-size:.95rem">Practical, play-based ways ABA helps young children — especially those with autism — build language and communication, one achievable step at a time.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-science-behind-aba.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A therapist combining data and warmth in a session" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">The Science and Compassion Behind ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Great ABA blends data with compassion. Here's how tracking progress and caring for the whole child work together to create real, lasting growth.</p>
 <span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-positive-reinforcement-aba.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1501686637-b7aa9c48a882?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child learning with colorful blocks" style="width:100%;height:170px;object-fit:cover;display:block">
+<img src="https://images.unsplash.com/photo-1501686637-b7aa9c48a882?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child learning with colorful blocks" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">How ABA Therapists Use Positive Reinforcement to Teach New Behaviors</h3>
 <p style="color:var(--muted);font-size:.95rem">A look at how ABA therapists use positive reinforcement to teach new skills — and how you can use the same ideas at home.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-developmental-screening.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1596997000103-e597b3ca50df?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent noting a young child's developmental milestones" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Developmental Screening: Milestones and Red Flags</h3>
+<p style="color:var(--muted);font-size:.95rem">How to track your child's milestones, recognise possible red flags, and know when to ask your pediatrician about a developmental screening.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-treatment-plan.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A behaviour analyst reviewing a child's assessment and goals" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Understanding Your Child's ABA Treatment Plan</h3>
+<p style="color:var(--muted);font-size:.95rem">An ABA treatment plan is your child's personalised roadmap. Here's how assessments, measurable goals and progress monitoring work together — with you as a partner.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-vs-other-therapies.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child and therapist working through a structured learning task" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">ABA vs. Other Therapies: What Makes It Different</h3>
+<p style="color:var(--muted);font-size:.95rem">How does ABA compare with other approaches? A clear look at what sets it apart — measurable, data-driven, individualised and focused on real-life skills.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-what-aba-therapy-looks-likeday-to-day-a-parent-friendly-breakdown.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A warm, play-based ABA session in progress" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">What ABA Therapy Looks Like Day to Day</h3>
+<p style="color:var(--muted);font-size:.95rem">A parent-friendly walkthrough of a typical ABA session — warm-up, play-based learning, natural-environment teaching, gentle behaviour support, breaks and a recap.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-therapy-terminology-explained-for-parents.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1596997000103-e597b3ca50df?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent taking notes during a meeting with a therapist" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">ABA Therapy Terminology Explained for Parents</h3>
+<p style="color:var(--muted);font-size:.95rem">New to ABA and feeling lost in the jargon? This friendly guide explains the key terms so you can take an active role in your child's therapy.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-what-aba-therapy-can-and-cannot-do.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and therapist setting realistic goals together" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">What ABA Therapy Can — and Cannot — Do</h3>
+<p style="color:var(--muted);font-size:.95rem">An honest look at what ABA can achieve — and what it can't. Setting realistic expectations is the key to getting the most from therapy.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-the-role-of-data-collection-in-aba-therapy.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1596997000103-e597b3ca50df?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Progress charts used to guide an ABA treatment plan" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">The Role of Data Collection in ABA Therapy</h3>
+<p style="color:var(--muted);font-size:.95rem">Data is the compass of ABA. Here's what gets measured, how it guides treatment decisions, and why families are an essential part of the process.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-the-difference-between-skill-building-and-compliance-based-teaching.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child learning a meaningful skill with a supportive therapist" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Skill-Building vs. Compliance-Based Teaching in ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Is ABA about teaching skills or expecting obedience? A clear look at why modern, ethical ABA builds meaningful skills — with dignity, assent and choice.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-how-aba-supports-daily-living-skills-toileting-dressing-routines.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent gently guiding a child through a daily routine" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Daily Living</span>
+<h3 style="margin:12px 0 .3em">How ABA Supports Daily Living Skills: Toileting, Dressing and Routines</h3>
+<p style="color:var(--muted);font-size:.95rem">Toileting, dressing and daily routines can be hard for many children. Here's how ABA builds these independence skills with patience, dignity and a step-by-step approach.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-why-data-matters-in-aba-explained-in-plain-language.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A therapist noting simple, friendly progress data during play" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Why Data Matters in ABA, Explained in Plain Language</h3>
+<p style="color:var(--muted);font-size:.95rem">'Data' can sound clinical, but in ABA it's simply how the team understands your child's learning. A plain-language guide to what it is and why it helps.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-what-is-aba-therapy.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1501686637-b7aa9c48a882?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child learning a new skill through playful activities" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">What Is ABA Therapy?</h3>
+<p style="color:var(--muted);font-size:.95rem">A simple, parent-friendly introduction to ABA — what it is, how it teaches skills through play, and why every child progresses at their own pace.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-why-aba-therapy-focuses-on-measurable-goals.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1596997000103-e597b3ca50df?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A simple progress chart tracking a child's goals" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Why ABA Therapy Focuses on Measurable Goals</h3>
+<p style="color:var(--muted);font-size:.95rem">Measurable goals give ABA its direction. Here's why clear, specific, trackable goals turn big challenges into steady, visible progress.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-parent-training-aba.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A caregiver learning strategies during a parent-training session" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Parent Training in ABA: Why Your Involvement Matters</h3>
+<p style="color:var(--muted);font-size:.95rem">Parent training turns caregivers into confident partners in their child's progress. Here's what it is, how it works, and the difference it makes at home.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-how-applied-behavior-analysis-supports-skill-development.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1501686637-b7aa9c48a882?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child mastering a new skill step by step" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">How ABA Supports Skill Development</h3>
+<p style="color:var(--muted);font-size:.95rem">ABA makes learning easier by breaking skills into simple steps, reinforcing practice and helping children use new skills across real-life settings.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-how-aba-therapy-fits-into-a-childs-daily-life.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A family weaving learning into an everyday moment at home" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">How ABA Therapy Fits Into a Child's Daily Life</h3>
+<p style="color:var(--muted);font-size:.95rem">ABA doesn't have to feel clinical. Here's how to weave it into everyday moments — with structure, visual supports, caregiver teamwork and plenty of celebrating small wins.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-nonverbal-communication.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1560707857-b897819e06fb?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child using picture cards to communicate" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Communication</span>
+<h3 style="margin:12px 0 .3em">Supporting Nonverbal Communication With ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Communication isn't only about speech. Here's how ABA helps nonverbal children express their needs, thoughts and feelings — and feel truly understood.</p>
 <span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-talking-about-aba.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1504151932400-72d4384f04b3?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent talking warmly with their child" style="width:100%;height:170px;object-fit:cover;display:block">
+<img src="https://images.unsplash.com/photo-1504151932400-72d4384f04b3?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent talking warmly with their child" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">How to Talk to Your Child About Starting ABA Therapy</h3>
 <p style="color:var(--muted);font-size:.95rem">Simple, reassuring ways to explain ABA therapy to your child so they feel comfortable and excited to start.</p>
 <span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-first-aba-session.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A young child playing during a therapy session" style="width:100%;height:170px;object-fit:cover;display:block">
+<img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A young child playing during a therapy session" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">What to Expect in Your Child's First ABA Session</h3>
 <p style="color:var(--muted);font-size:.95rem">A friendly walkthrough of your child's very first ABA session, so you both know exactly what to expect.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-applied-behavior-analysis-guide.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A therapist and child working together during an in-home session" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">An ABA Guide for South Florida Families</h3>
+<p style="color:var(--muted);font-size:.95rem">A friendly introduction to ABA for South Florida families — what it is, the core techniques, how it builds skills, and how to get started locally.</p>
 <span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-calm-daily-routine.html" style="padding:0;overflow:hidden">
-<img src="https://images.unsplash.com/photo-1569251703679-fad917f9409e?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and child sharing a calm moment together" style="width:100%;height:170px;object-fit:cover;display:block">
+<img src="https://images.unsplash.com/photo-1569251703679-fad917f9409e?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and child sharing a calm moment together" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
 <div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
 <h3 style="margin:12px 0 .3em">How to Build a Calm Daily Routine for Children With Autism</h3>
 <p style="color:var(--muted);font-size:.95rem">Why predictable routines help children with autism feel secure — and simple steps to build one that works for your family.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-kindergarten-readiness.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Children sitting together in a bright classroom setting" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">How ABA Supports Kindergarten Readiness</h3>
+<p style="color:var(--muted);font-size:.95rem">Starting school is a big step. Here's how early ABA support helps children build the routines, social skills and confidence to walk into kindergarten ready to thrive.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-what-is-aba-therapy-overview-miami-families.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A South Florida family exploring ABA options" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">What Is ABA Therapy? An Overview for Miami Families</h3>
+<p style="color:var(--muted);font-size:.95rem">A friendly overview of ABA for Miami families — what it is, its core principles, who benefits, local options, and what to know before you begin.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-play-build-social-skills.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Children building social skills through a shared game" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Social Skills</span>
+<h3 style="margin:12px 0 .3em">Using Play to Build Social Skills in ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Play is one of ABA's most powerful tools for social skills. Here's how clear goals, structured play and family involvement help children share, take turns and connect.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-support-aba-at-home.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1569251703679-fad917f9409e?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent reinforcing therapy skills during a home routine" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
+<h3 style="margin:12px 0 .3em">How to Support Your Child's ABA Therapy at Home</h3>
+<p style="color:var(--muted);font-size:.95rem">The progress made in ABA grows stronger at home. Here's how consistency, specific praise and teamwork with your therapist reinforce your child's skills every day.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-early-intervention-aba.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1569251703679-fad917f9409e?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and young child sharing a learning moment" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Why Early Intervention With ABA Makes a Difference</h3>
+<p style="color:var(--muted);font-size:.95rem">Early ABA intervention builds learning, communication and social skills — and it's never too late to start. Here's why early support counts, and how it helps.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-how-aba-therapy-is-individualized-for-each-child.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A therapist tailoring a learning plan to a child's interests" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">How ABA Therapy Is Individualised for Each Child</h3>
+<p style="color:var(--muted);font-size:.95rem">Good ABA is never one-size-fits-all. Here's how assessment, interest-based goals, evolving plans and family collaboration build a plan around your child.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-the-science-behind-aba-therapy-explained-simply.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1532789339108-2ebc484efbf1?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A clear, friendly illustration of how ABA works" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">The Science Behind ABA Therapy, Explained Simply</h3>
+<p style="color:var(--muted);font-size:.95rem">A plain-language look at the science of ABA — how assessment, reinforcement and research combine to create positive, ethical, lasting change.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-autism-diagnosis-next-steps.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1532789339108-2ebc484efbf1?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A supportive family moment at home" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
+<h3 style="margin:12px 0 .3em">After an Autism Diagnosis: Your Next Steps</h3>
+<p style="color:var(--muted);font-size:.95rem">A new autism diagnosis brings big emotions. Here's a gentle, practical guide to the first steps — processing feelings, pursuing evaluations, and finding support.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-common-misunderstandings-about-aba-therapy.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1501686637-b7aa9c48a882?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A child and therapist engaged in a positive learning activity" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">Common Misunderstandings About ABA Therapy</h3>
+<p style="color:var(--muted);font-size:.95rem">Many people picture ABA as rigid and compliance-focused. Here's where that image comes from — and what modern, compassionate, individualised ABA actually looks like.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-early-intervention-explained.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1532789339108-2ebc484efbf1?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A family supporting a young child's development at home" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Early Intervention in ABA, Explained</h3>
+<p style="color:var(--muted);font-size:.95rem">What early intervention in ABA really means — the birth-to-three window, how it works, and why collaboration between parents, therapists and teachers matters.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-what-families-should-know-before-starting-aba-therapy.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A family meeting their ABA team for an intake consultation" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">ABA Therapy</span>
+<h3 style="margin:12px 0 .3em">What Families Should Know Before Starting ABA Therapy</h3>
+<p style="color:var(--muted);font-size:.95rem">From intake and assessment to collaborative planning and setting goals — here's what to expect, and how to prepare your family, before ABA begins.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-aba-turn-taking.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Two children taking turns during a play activity" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Social Skills</span>
+<h3 style="margin:12px 0 .3em">Teaching Turn-Taking and Sharing Through ABA</h3>
+<p style="color:var(--muted);font-size:.95rem">Turn-taking and sharing are the building blocks of friendship. Here's how therapists teach them — and simple ways to practise at home with games, timers and praise.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-managing-behaviors-at-home.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1581998392741-67879e0ef04a?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent calmly supporting a child through a big feeling" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Parenting Support</span>
+<h3 style="margin:12px 0 .3em">Managing Challenging Behaviours at Home</h3>
+<p style="color:var(--muted);font-size:.95rem">Challenging behaviour is often a child's way of communicating. Here's how to respond with positive strategies, calm modelling and clear expectations at home.</p>
+<span class="more">Read &rarr;</span></div></a><a class="card link-card" href="blog-choosing-early-intervention.html" style="padding:0;overflow:hidden">
+<img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?fm=jpg&q=70&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent meeting a provider for an initial consultation" loading="lazy" style="width:100%;height:170px;object-fit:cover;display:block">
+<div style="padding:22px"><span style="display:inline-block;background:var(--teal-tint);color:var(--teal-dark);font-family:var(--font-head);font-weight:600;font-size:.76rem;padding:5px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.09em">Early Intervention</span>
+<h3 style="margin:12px 0 .3em">Choosing the Right Early Intervention Program</h3>
+<p style="color:var(--muted);font-size:.95rem">How to choose an early intervention provider in South Florida — what to look for in qualifications, approach and fit, so your child gets the right support.</p>
 <span class="more">Read &rarr;</span></div></a></div>
 <p class="center" style="margin-top:28px;color:var(--muted)">Looking for practical tools and downloads instead? Visit <a href="family-resources.html">Family Resources</a>.</p>
 </div></section>
@@ -318,6 +544,20 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 <span>© 2026 DARTherapy ABA. All rights reserved.</span>
 <span>BCBA-led · Bilingual · HIPAA-conscious care</span>
 </div></div></footer>
+<div class="modal-overlay" id="consult-modal" aria-hidden="true">
+<div class="modal" role="dialog" aria-modal="true" aria-label="Request a free consultation">
+<button class="modal-close" type="button" aria-label="Close">&times;</button>
+<h3>Request a free consultation</h3>
+<p class="form-note" style="margin-bottom:18px">Tell us a little about your child and we'll respond within one business day.</p>
+<form action="#" method="post" novalidate>
+<div class="field two"><div><label>Parent / Guardian name</label><input type="text" name="name" required></div><div><label>Phone</label><input type="tel" name="phone" required></div></div>
+<div class="field two"><div><label>Email</label><input type="email" name="email" required></div><div><label>Child's age</label><input type="text" name="child_age"></div></div>
+<div class="field two"><div><label>Service of interest</label><select name="service"><option>In-Home ABA Therapy</option><option>School-Based ABA Therapy</option><option>Community-Based ABA</option><option>Parent Training</option><option>ABA Assessment & FBA</option><option>Not sure yet</option></select></div><div><label>Insurance</label><select name="insurance"><option>Aetna</option><option>Cigna</option><option>Blue Cross Blue Shield (BCBS)</option><option>Other (non-Medicaid)</option><option>Private pay / Self-pay</option></select></div></div>
+<div class="field two"><div><label>Preferred days</label><input type="text" name="days" placeholder="e.g. Weekday mornings"></div><div><label>Preferred language</label><select name="language"><option>English</option><option>Spanish</option><option>Either</option></select></div></div>
+<div class="field"><label>Anything else we should know?</label><textarea name="message" rows="3"></textarea></div>
+<input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<button type="submit" class="btn btn-primary">Request consultation</button>
+</form></div></div>
 <script>
 // DARTherapy ABA — shared nav interactions
 (function(){
@@ -338,6 +578,34 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
         dd.style.opacity=vis?'':'1';
       }
     });
+  });
+})();
+
+// Consultation modal
+(function(){
+  var ov=document.getElementById('consult-modal');
+  if(!ov) return;
+  function open(e){ if(e) e.preventDefault(); ov.classList.add('open'); document.body.classList.add('modal-open'); }
+  function close(){ ov.classList.remove('open'); document.body.classList.remove('modal-open'); }
+  document.querySelectorAll('[data-open-consult]').forEach(function(b){ b.addEventListener('click',open); });
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  var c=ov.querySelector('.modal-close'); if(c) c.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+})();
+
+// Active nav highlight (works on folder + flat builds, EN + ES)
+(function(){
+  function key(u){ if(!u) return null; var a=document.createElement('a'); a.href=u;
+    var p=a.pathname.replace(/\/+$/,''); var seg=(p.split('/').pop()||'').replace(/\.html$/,'');
+    return seg==='index'?'':seg; }
+  var cur=key(location.href), path=location.pathname;
+  function match(k){ if(k==null) return false; if(k===cur) return true;
+    if(k && cur && cur.indexOf(k+'-')===0) return true;
+    if(k && path.indexOf('/'+k+'/')>-1) return true; return false; }
+  document.querySelectorAll('.menu>li').forEach(function(li){
+    var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
+    if(hit){ li.classList.add('is-active');
+      var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
   });
 })();
 

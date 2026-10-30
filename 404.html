@@ -204,6 +204,22 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
   footer .fgrid{grid-template-columns:1fr}
 }
 
+/* ===== Header CTA fix + Consultation modal ===== */
+.nav-cta .btn-primary{white-space:nowrap;padding:.62em 1.25em;font-size:.92rem;line-height:1.15}
+.modal-overlay{position:fixed;inset:0;background:rgba(16,42,44,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:40px 16px;overflow:auto}
+.modal-overlay.open{display:flex}
+body.modal-open{overflow:hidden}
+.modal{background:#fff;border-radius:20px;max-width:640px;width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.45);position:relative;padding:30px 30px 28px;margin:auto}
+.modal h3{margin-top:0;margin-bottom:.25em}
+.modal-close{position:absolute;top:13px;right:15px;background:var(--teal-tint);border:0;width:38px;height:38px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--teal-dark);transition:.15s}
+.modal-close:hover{background:var(--teal);color:#fff}
+@media(max-width:760px){.modal{padding:24px 18px}}
+
+/* active nav indicator */
+.menu>li.is-active>a,.menu>li.is-active>button{color:var(--teal-dark);background:var(--teal-tint);position:relative}
+.menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
+@media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
+
 </style></head><body>
 <div class="topbar"><div class="wrap">
 <span>BCBA-led · Bilingual ABA therapy · Ages 2–18 · Broward, Miami-Dade & Palm Beach</span>
@@ -222,7 +238,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </ul>
 <div class="nav-cta">
 <span class="nav-phone">(786) 910-5979</span>
-<a href="contact.html" class="btn btn-primary">Free Consultation</a>
+<button type="button" class="btn btn-primary" data-open-consult>Free Consultation</button>
 <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav></header>
 <section style="padding-top:90px;padding-bottom:90px"><div class="wrap center" style="max-width:56ch">
@@ -276,6 +292,34 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
         dd.style.opacity=vis?'':'1';
       }
     });
+  });
+})();
+
+// Consultation modal
+(function(){
+  var ov=document.getElementById('consult-modal');
+  if(!ov) return;
+  function open(e){ if(e) e.preventDefault(); ov.classList.add('open'); document.body.classList.add('modal-open'); }
+  function close(){ ov.classList.remove('open'); document.body.classList.remove('modal-open'); }
+  document.querySelectorAll('[data-open-consult]').forEach(function(b){ b.addEventListener('click',open); });
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  var c=ov.querySelector('.modal-close'); if(c) c.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+})();
+
+// Active nav highlight (works on folder + flat builds, EN + ES)
+(function(){
+  function key(u){ if(!u) return null; var a=document.createElement('a'); a.href=u;
+    var p=a.pathname.replace(/\/+$/,''); var seg=(p.split('/').pop()||'').replace(/\.html$/,'');
+    return seg==='index'?'':seg; }
+  var cur=key(location.href), path=location.pathname;
+  function match(k){ if(k==null) return false; if(k===cur) return true;
+    if(k && cur && cur.indexOf(k+'-')===0) return true;
+    if(k && path.indexOf('/'+k+'/')>-1) return true; return false; }
+  document.querySelectorAll('.menu>li').forEach(function(li){
+    var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
+    if(hit){ li.classList.add('is-active');
+      var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
   });
 })();
 

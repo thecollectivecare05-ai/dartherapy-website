@@ -217,6 +217,22 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
   footer .fgrid{grid-template-columns:1fr}
 }
 
+/* ===== Header CTA fix + Consultation modal ===== */
+.nav-cta .btn-primary{white-space:nowrap;padding:.62em 1.25em;font-size:.92rem;line-height:1.15}
+.modal-overlay{position:fixed;inset:0;background:rgba(16,42,44,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:40px 16px;overflow:auto}
+.modal-overlay.open{display:flex}
+body.modal-open{overflow:hidden}
+.modal{background:#fff;border-radius:20px;max-width:640px;width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.45);position:relative;padding:30px 30px 28px;margin:auto}
+.modal h3{margin-top:0;margin-bottom:.25em}
+.modal-close{position:absolute;top:13px;right:15px;background:var(--teal-tint);border:0;width:38px;height:38px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--teal-dark);transition:.15s}
+.modal-close:hover{background:var(--teal);color:#fff}
+@media(max-width:760px){.modal{padding:24px 18px}}
+
+/* active nav indicator */
+.menu>li.is-active>a,.menu>li.is-active>button{color:var(--teal-dark);background:var(--teal-tint);position:relative}
+.menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
+@media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "@id": "https://dartherapyaba.com/#business", "name": "DARTherapy ABA", "description": "Applied Behavior Analysis (ABA) therapy and parent training for children with autism and developmental disorders, led by a Board Certified Behavior Analyst (BCBA). In-home, school-based and community-based services across South Florida, in English and Spanish.", "url": "https://dartherapyaba.com/", "telephone": "+17869105979", "faxNumber": "+17869541809", "email": "daniel@dartherapyaba.com", "medicalSpecialty": "Applied Behavior Analysis", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "3339 NW 55th St", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33309", "addressCountry": "US"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:30"}], "founder": {"@type": "Person", "name": "Daniel Rivas", "jobTitle": "Board Certified Behavior Analyst (BCBA)"}, "availableLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/dartherapy3/"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://dartherapyaba.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://dartherapyaba.com/es/recursos/"}, {"@type": "ListItem", "position": 3, "name": "Recursos para Familias", "item": "https://dartherapyaba.com/es/recursos-para-familias/"}]}</script>
@@ -240,7 +256,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </ul>
 <div class="nav-cta">
 <span class="nav-phone">(786) 910-5979</span>
-<a href="es-contacto.html" class="btn btn-primary">Consulta Gratis</a>
+<button type="button" class="btn btn-primary" data-open-consult>Consulta Gratis</button>
 <button class="hamburger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav></header>
 
@@ -249,10 +265,15 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 <nav class="crumb" aria-label="Ruta"><a href="es.html">Inicio</a> › <a href="es-recursos.html">Recursos</a> › <span>Recursos para Familias</span></nav>
 <span class="eyebrow">Recursos para Familias</span>
 <h1>Herramientas y apoyo para su familia</h1>
-<p class="lead" style="max-width:60ch">Una biblioteca creciente de recursos prácticos — guías, ayuda con seguros e información local confiable — para apoyar a su familia en cada etapa.</p></div></div></div>
+<p class="lead" style="max-width:60ch">Una biblioteca creciente de recursos prácticos — herramientas de detección, comunidades de apoyo, talleres y ayuda con financiamiento — para apoyar a su familia en cada etapa.</p></div></div></div>
 <section style="padding:20px 0 0"><div class="wrap" style="max-width:1050px"><img src="https://images.unsplash.com/photo-1532789339108-2ebc484efbf1?fm=jpg&q=70&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Un padre y su hijo leyendo juntos" style="width:100%;height:300px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow-sm)"></div></section>
 <section><div class="wrap"><div class="center" style="max-width:60ch"><span class="eyebrow">Explorar</span><h2>Recursos por tema</h2></div>
 <div class="grid g4" style="margin-top:34px"><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div><h3>Guías para empezar</h3><p>Explicaciones sencillas sobre ABA, evaluaciones y qué esperar.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Ayuda con seguros</h3><p>Cómo funciona la cobertura de ABA en Florida y cómo verificar su plan.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.2 6C19 16.6 12 21 12 21z"/></svg></div><h3>Autismo y desarrollo</h3><p>Información confiable sobre el autismo y los hitos del desarrollo.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Recursos del sur de Florida</h3><p>Grupos de apoyo, escuelas y organizaciones comunitarias locales.</p></div></div>
+</div></section>
+<section class="section-tint"><div class="wrap">
+<div class="center" style="max-width:62ch"><span class="eyebrow">Herramientas y enlaces confiables</span><h2>Recursos útiles para las familias</h2>
+<p style="color:var(--muted)">Una selección de herramientas gratuitas de detección, comunidades de padres y recursos de financiamiento que compartimos a menudo con las familias.</p></div>
+<div class="grid g2" style="margin-top:34px"><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Detección temprana (M-CHAT)</h3><p>La Lista de Verificación Modificada para el Autismo en Niños Pequeños es una herramienta gratuita de detección para niños de 16 a 30 meses. Si el resultado indica riesgo medio o alto, consulte a su pediatra o a un neurólogo.</p><ul style="list-style:none;padding:0;margin:14px 0 0;font-weight:600"><li style="margin:6px 0"><a href="https://www.autismspeaks.org/screen-your-child" target="_blank" rel="noopener">Evalúe a su hijo (Autism Speaks) &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://mchatscreen.com/mchat-rf/scoring/" target="_blank" rel="noopener">Guía de puntuación M-CHAT-R/F &nbsp;&rarr;</a></li></ul></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.2 6C19 16.6 12 21 12 21z"/></svg></div><h3>Comunidades de apoyo para padres</h3><p>Conectarse con otros padres puede marcar una gran diferencia. Estos grupos de Facebook ofrecen apoyo, consejos y experiencias compartidas.</p><ul style="list-style:none;padding:0;margin:14px 0 0;font-weight:600"><li style="margin:6px 0"><a href="https://www.facebook.com/groups/364443360257516" target="_blank" rel="noopener">Grupo de apoyo para padres de niños con autismo severo &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://www.facebook.com/groups/3095453320577308" target="_blank" rel="noopener">Grupo de apoyo para niños autistas &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://www.facebook.com/groups/121278477885082" target="_blank" rel="noopener">Madres de niños autistas &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://www.facebook.com/groups/735802303290547" target="_blank" rel="noopener">Padres afrodescendientes de niños con autismo y discapacidades &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://www.facebook.com/groups/225415661204977" target="_blank" rel="noopener">Padres de niños autistas y con necesidades especiales &nbsp;&rarr;</a></li><li style="margin:6px 0"><a href="https://www.facebook.com/groups/649616418990424" target="_blank" rel="noopener">Padres de niños con autismo &nbsp;&rarr;</a></li></ul></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div><h3>Aprendizaje y talleres</h3><p>La Dra. Mary Barbera, BCBA-D y autora, comparte talleres gratuitos y orientación práctica para padres y profesionales en su blog Autism Mom (en inglés).</p><ul style="list-style:none;padding:0;margin:14px 0 0;font-weight:600"><li style="margin:6px 0"><a href="https://marybarbera.com/" target="_blank" rel="noopener">Mary Barbera — blog Autism Mom &nbsp;&rarr;</a></li></ul></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Becas y financiamiento</h3><p>Step Up For Students es una organización sin fines de lucro aprobada por el estado que administra becas para estudiantes de Florida, incluida la beca Unique Abilities para niños con necesidades especiales.</p><ul style="list-style:none;padding:0;margin:14px 0 0;font-weight:600"><li style="margin:6px 0"><a href="https://www.stepupforstudents.org/scholarships/unique-abilities/" target="_blank" rel="noopener">Step Up For Students — Unique Abilities &nbsp;&rarr;</a></li></ul></div></div>
 <p class="center" style="margin-top:26px">¿Busca artículos? Visite <a href="es-recursos.html">Recursos y Blog</a>.</p></div></section>
 <section><div class="wrap"><div class="cta-band"><div class="dots"></div><div style="position:relative"><h2>¿Listo para dar el primer paso?</h2><p>Reserve una consulta gratuita y sin compromiso con nuestro equipo bilingüe. Le escuchamos, respondemos sus preguntas y le ayudamos a entender el siguiente paso.</p><a href="es-contacto.html" class="btn btn-primary">Solicitar Consulta Gratis</a>&nbsp;<a href="tel:+17869105979" class="btn btn-white">Llamar (786) 910-5979</a></div></div></div></section>
 <footer class="site"><div class="wrap">
@@ -276,6 +297,20 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </div>
 <div class="fbottom"><span>© 2026 DARTherapy ABA. Todos los derechos reservados.</span>
 <span>Dirigida por un BCBA · Bilingüe · Atención respetuosa de HIPAA</span></div></div></footer>
+<div class="modal-overlay" id="consult-modal" aria-hidden="true">
+<div class="modal" role="dialog" aria-modal="true" aria-label="Solicitar una consulta gratuita">
+<button class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+<h3>Solicitar una consulta gratuita</h3>
+<p class="form-note" style="margin-bottom:18px">Cuéntenos sobre su hijo/a y le responderemos en un día hábil.</p>
+<form action="#" method="post" novalidate>
+<div class="field two"><div><label>Nombre del padre / tutor</label><input type="text" name="name" required></div><div><label>Teléfono</label><input type="tel" name="phone" required></div></div>
+<div class="field two"><div><label>Correo electrónico</label><input type="email" name="email" required></div><div><label>Edad del niño/a</label><input type="text" name="child_age"></div></div>
+<div class="field two"><div><label>Servicio de interés</label><select name="service"><option>Terapia ABA en el Hogar</option><option>Terapia ABA Escolar</option><option>ABA Comunitario</option><option>Entrenamiento para Padres</option><option>Evaluación ABA y FBA</option><option>Aún no estoy seguro/a</option></select></div><div><label>Seguro</label><select name="insurance"><option>Aetna</option><option>Cigna</option><option>Blue Cross Blue Shield (BCBS)</option><option>Otro (no Medicaid)</option><option>Pago privado</option></select></div></div>
+<div class="field two"><div><label>Días preferidos</label><input type="text" name="days" placeholder="ej. Mañanas entre semana"></div><div><label>Idioma preferido</label><select name="language"><option>Español</option><option>Inglés</option><option>Cualquiera</option></select></div></div>
+<div class="field"><label>¿Algo más que debamos saber?</label><textarea name="message" rows="3"></textarea></div>
+<input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<button type="submit" class="btn btn-primary">Solicitar consulta</button>
+</form></div></div>
 <script>
 // DARTherapy ABA — shared nav interactions
 (function(){
@@ -296,6 +331,34 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
         dd.style.opacity=vis?'':'1';
       }
     });
+  });
+})();
+
+// Consultation modal
+(function(){
+  var ov=document.getElementById('consult-modal');
+  if(!ov) return;
+  function open(e){ if(e) e.preventDefault(); ov.classList.add('open'); document.body.classList.add('modal-open'); }
+  function close(){ ov.classList.remove('open'); document.body.classList.remove('modal-open'); }
+  document.querySelectorAll('[data-open-consult]').forEach(function(b){ b.addEventListener('click',open); });
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  var c=ov.querySelector('.modal-close'); if(c) c.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+})();
+
+// Active nav highlight (works on folder + flat builds, EN + ES)
+(function(){
+  function key(u){ if(!u) return null; var a=document.createElement('a'); a.href=u;
+    var p=a.pathname.replace(/\/+$/,''); var seg=(p.split('/').pop()||'').replace(/\.html$/,'');
+    return seg==='index'?'':seg; }
+  var cur=key(location.href), path=location.pathname;
+  function match(k){ if(k==null) return false; if(k===cur) return true;
+    if(k && cur && cur.indexOf(k+'-')===0) return true;
+    if(k && path.indexOf('/'+k+'/')>-1) return true; return false; }
+  document.querySelectorAll('.menu>li').forEach(function(li){
+    var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
+    if(hit){ li.classList.add('is-active');
+      var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
   });
 })();
 

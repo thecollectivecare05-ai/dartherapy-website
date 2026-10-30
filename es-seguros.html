@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seguros y Pago de Terapia ABA | DARTherapy ABA</title>
-<meta name="description" content="DARTherapy ABA acepta Aetna, Cigna, Blue Cross Blue Shield (BCBS) y Tricare para terapia ABA en Florida, además de pago privado. Verificamos sus beneficios.">
+<meta name="description" content="DARTherapy ABA acepta Aetna, Cigna y Blue Cross Blue Shield (BCBS) para terapia ABA en Florida, además de pago privado. Verificamos sus beneficios.">
 <link rel="canonical" href="https://dartherapyaba.com/es/seguros/">
 <link rel="alternate" hreflang="es" href="https://dartherapyaba.com/es/seguros/">
 <link rel="alternate" hreflang="en" href="https://dartherapyaba.com/insurance-funding/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Seguros y Pago de Terapia ABA | DARTherapy ABA">
-<meta property="og:description" content="DARTherapy ABA acepta Aetna, Cigna, Blue Cross Blue Shield (BCBS) y Tricare para terapia ABA en Florida, además de pago privado. Verificamos sus beneficios.">
+<meta property="og:description" content="DARTherapy ABA acepta Aetna, Cigna y Blue Cross Blue Shield (BCBS) para terapia ABA en Florida, además de pago privado. Verificamos sus beneficios.">
 <meta property="og:url" content="https://dartherapyaba.com/es/seguros/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23137A78'/%3E%3Cpath d='M16 23c-5-3.2-8-6-8-9.5A4.5 4.5 0 0 1 16 10a4.5 4.5 0 0 1 8 3.5C24 17 21 19.8 16 23z' fill='%23FF6F59'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -217,10 +217,26 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
   footer .fgrid{grid-template-columns:1fr}
 }
 
+/* ===== Header CTA fix + Consultation modal ===== */
+.nav-cta .btn-primary{white-space:nowrap;padding:.62em 1.25em;font-size:.92rem;line-height:1.15}
+.modal-overlay{position:fixed;inset:0;background:rgba(16,42,44,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:40px 16px;overflow:auto}
+.modal-overlay.open{display:flex}
+body.modal-open{overflow:hidden}
+.modal{background:#fff;border-radius:20px;max-width:640px;width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.45);position:relative;padding:30px 30px 28px;margin:auto}
+.modal h3{margin-top:0;margin-bottom:.25em}
+.modal-close{position:absolute;top:13px;right:15px;background:var(--teal-tint);border:0;width:38px;height:38px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--teal-dark);transition:.15s}
+.modal-close:hover{background:var(--teal);color:#fff}
+@media(max-width:760px){.modal{padding:24px 18px}}
+
+/* active nav indicator */
+.menu>li.is-active>a,.menu>li.is-active>button{color:var(--teal-dark);background:var(--teal-tint);position:relative}
+.menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
+@media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "@id": "https://dartherapyaba.com/#business", "name": "DARTherapy ABA", "description": "Applied Behavior Analysis (ABA) therapy and parent training for children with autism and developmental disorders, led by a Board Certified Behavior Analyst (BCBA). In-home, school-based and community-based services across South Florida, in English and Spanish.", "url": "https://dartherapyaba.com/", "telephone": "+17869105979", "faxNumber": "+17869541809", "email": "daniel@dartherapyaba.com", "medicalSpecialty": "Applied Behavior Analysis", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "3339 NW 55th St", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33309", "addressCountry": "US"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:30"}], "founder": {"@type": "Person", "name": "Daniel Rivas", "jobTitle": "Board Certified Behavior Analyst (BCBA)"}, "availableLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/dartherapy3/"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://dartherapyaba.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Seguros y Pago", "item": "https://dartherapyaba.com/es/seguros/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Qué seguros aceptan?", "acceptedAnswer": {"@type": "Answer", "text": "Aceptamos los principales planes que cubren terapia ABA en Florida, incluyendo Aetna, Cigna, Blue Cross Blue Shield (BCBS) y Tricare. También hay opciones de pago privado. Confirmaremos su plan durante la consulta."}}, {"@type": "Question", "name": "¿El seguro cubre la terapia ABA en Florida?", "acceptedAnswer": {"@type": "Answer", "text": "La ley estatal de Florida exige que la mayoría de los seguros cubran la terapia ABA para niños con diagnóstico de autismo. Los detalles varían según el plan, por eso verificamos sus beneficios antes de comenzar."}}, {"@type": "Question", "name": "¿Y si mi plan no aparece?", "acceptedAnswer": {"@type": "Answer", "text": "Contáctenos de todos modos — los planes y redes cambian, y con gusto revisamos su cobertura. Si no podemos facturar su plan, le explicamos las opciones de pago privado."}}, {"@type": "Question", "name": "¿Aceptan Medicaid de Florida?", "acceptedAnswer": {"@type": "Answer", "text": "Actualmente no somos un proveedor inscrito de Medicaid de Florida. Si tiene Medicaid, el directorio de proveedores de la Florida AHCA puede ayudarle a encontrar proveedores de ABA participantes."}}, {"@type": "Question", "name": "¿Cómo funciona el pago?", "acceptedAnswer": {"@type": "Answer", "text": "Después de verificar sus beneficios, le explicamos exactamente qué cubre su plan y de qué es responsable — con claridad y por adelantado, antes de comenzar."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "¿Qué seguros aceptan?", "acceptedAnswer": {"@type": "Answer", "text": "Aceptamos los principales planes que cubren terapia ABA en Florida, incluyendo Aetna, Cigna y Blue Cross Blue Shield (BCBS). También hay opciones de pago privado. Confirmaremos su plan durante la consulta."}}, {"@type": "Question", "name": "¿El seguro cubre la terapia ABA en Florida?", "acceptedAnswer": {"@type": "Answer", "text": "La ley estatal de Florida exige que la mayoría de los seguros cubran la terapia ABA para niños con diagnóstico de autismo. Los detalles varían según el plan, por eso verificamos sus beneficios antes de comenzar."}}, {"@type": "Question", "name": "¿Y si mi plan no aparece?", "acceptedAnswer": {"@type": "Answer", "text": "Contáctenos de todos modos — los planes y redes cambian, y con gusto revisamos su cobertura. Si no podemos facturar su plan, le explicamos las opciones de pago privado."}}, {"@type": "Question", "name": "¿Aceptan Medicaid de Florida?", "acceptedAnswer": {"@type": "Answer", "text": "Actualmente no somos un proveedor inscrito de Medicaid de Florida. Si tiene Medicaid, el directorio de proveedores de la Florida AHCA puede ayudarle a encontrar proveedores de ABA participantes."}}, {"@type": "Question", "name": "¿Cómo funciona el pago?", "acceptedAnswer": {"@type": "Answer", "text": "Después de verificar sus beneficios, le explicamos exactamente qué cubre su plan y de qué es responsable — con claridad y por adelantado, antes de comenzar."}}]}</script>
 </head>
 <body>
 <div class="topbar"><div class="wrap">
@@ -241,7 +257,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </ul>
 <div class="nav-cta">
 <span class="nav-phone">(786) 910-5979</span>
-<a href="es-contacto.html" class="btn btn-primary">Consulta Gratis</a>
+<button type="button" class="btn btn-primary" data-open-consult>Consulta Gratis</button>
 <button class="hamburger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav></header>
 
@@ -254,7 +270,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 <div class="hero-cta"><a href="es-contacto.html" class="btn btn-primary">Verificar mis beneficios</a><a href="tel:+17869105979" class="btn btn-ghost">Llamar (786) 910-5979</a></div></div></div></div>
 <section><div class="wrap"><div class="center" style="max-width:60ch"><span class="eyebrow">Planes que aceptamos</span><h2>Seguros con los que trabajamos</h2>
 <p class="lead" style="margin-inline:auto">Aceptamos estos planes principales para la cobertura de ABA, además de pago privado.</p></div>
-<div class="grid g4" style="margin-top:36px"><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Aetna</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Cigna</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Blue Cross Blue Shield (BCBS)</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Tricare</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div></div>
+<div class="grid g4" style="margin-top:36px"><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Aetna</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Cigna</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Blue Cross Blue Shield (BCBS)</h3><p>Aceptado para la cobertura de terapia ABA. Verificaremos su plan y beneficios específicos durante su consulta gratuita.</p></div></div>
 <p class="center" style="margin-top:22px;color:var(--muted)">¿No ve su plan? <a href="es-contacto.html">Pregúntenos</a> — con gusto revisamos su cobertura.</p></div></section>
 <section class="section-tint"><div class="wrap"><div class="center" style="max-width:60ch"><span class="eyebrow">Ley de Florida</span><h2>ABA está cubierto para la mayoría de las familias</h2>
 <p class="lead" style="margin-inline:auto">La ley de Florida exige que la mayoría de los seguros cubran ABA para niños con diagnóstico de autismo. Así lo hacemos sencillo.</p></div><div class="steps s4" style="margin-top:34px">
@@ -268,7 +284,7 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 <p>Si tiene Medicaid, el directorio de la <strong>Florida AHCA</strong> puede ayudarle a encontrar proveedores de ABA participantes en su área.</p></div>
 <div class="panel teal"><h3>Pago privado bienvenido</h3><p>¿Prefiere no usar seguro o está entre planes? Hay arreglos de pago privado disponibles. Le explicamos las opciones con claridad.</p>
 <p style="margin-bottom:0"><a href="es-contacto.html" class="btn btn-primary">Hablar sobre opciones</a></p></div></div></section>
-<section class="section-tint"><div class="wrap"><div class="center" style="max-width:60ch"><span class="eyebrow">Preguntas</span><h2>Seguros y pago, respondido</h2></div><div class="faq" style="margin-top:34px"><details open><summary>¿Qué seguros aceptan? <span class="pm">+</span></summary><div class="ans">Aceptamos los principales planes que cubren terapia ABA en Florida, incluyendo Aetna, Cigna, Blue Cross Blue Shield (BCBS) y Tricare. También hay opciones de pago privado. Confirmaremos su plan durante la consulta.</div></details><details><summary>¿El seguro cubre la terapia ABA en Florida? <span class="pm">+</span></summary><div class="ans">La ley estatal de Florida exige que la mayoría de los seguros cubran la terapia ABA para niños con diagnóstico de autismo. Los detalles varían según el plan, por eso verificamos sus beneficios antes de comenzar.</div></details><details><summary>¿Y si mi plan no aparece? <span class="pm">+</span></summary><div class="ans">Contáctenos de todos modos — los planes y redes cambian, y con gusto revisamos su cobertura. Si no podemos facturar su plan, le explicamos las opciones de pago privado.</div></details><details><summary>¿Aceptan Medicaid de Florida? <span class="pm">+</span></summary><div class="ans">Actualmente no somos un proveedor inscrito de Medicaid de Florida. Si tiene Medicaid, el directorio de proveedores de la Florida AHCA puede ayudarle a encontrar proveedores de ABA participantes.</div></details><details><summary>¿Cómo funciona el pago? <span class="pm">+</span></summary><div class="ans">Después de verificar sus beneficios, le explicamos exactamente qué cubre su plan y de qué es responsable — con claridad y por adelantado, antes de comenzar.</div></details></div></div></section>
+<section class="section-tint"><div class="wrap"><div class="center" style="max-width:60ch"><span class="eyebrow">Preguntas</span><h2>Seguros y pago, respondido</h2></div><div class="faq" style="margin-top:34px"><details open><summary>¿Qué seguros aceptan? <span class="pm">+</span></summary><div class="ans">Aceptamos los principales planes que cubren terapia ABA en Florida, incluyendo Aetna, Cigna y Blue Cross Blue Shield (BCBS). También hay opciones de pago privado. Confirmaremos su plan durante la consulta.</div></details><details><summary>¿El seguro cubre la terapia ABA en Florida? <span class="pm">+</span></summary><div class="ans">La ley estatal de Florida exige que la mayoría de los seguros cubran la terapia ABA para niños con diagnóstico de autismo. Los detalles varían según el plan, por eso verificamos sus beneficios antes de comenzar.</div></details><details><summary>¿Y si mi plan no aparece? <span class="pm">+</span></summary><div class="ans">Contáctenos de todos modos — los planes y redes cambian, y con gusto revisamos su cobertura. Si no podemos facturar su plan, le explicamos las opciones de pago privado.</div></details><details><summary>¿Aceptan Medicaid de Florida? <span class="pm">+</span></summary><div class="ans">Actualmente no somos un proveedor inscrito de Medicaid de Florida. Si tiene Medicaid, el directorio de proveedores de la Florida AHCA puede ayudarle a encontrar proveedores de ABA participantes.</div></details><details><summary>¿Cómo funciona el pago? <span class="pm">+</span></summary><div class="ans">Después de verificar sus beneficios, le explicamos exactamente qué cubre su plan y de qué es responsable — con claridad y por adelantado, antes de comenzar.</div></details></div></div></section>
 <section><div class="wrap"><div class="cta-band"><div class="dots"></div><div style="position:relative"><h2>Revisemos su cobertura juntos</h2><p>Reserve una consulta gratuita y sin compromiso con nuestro equipo bilingüe. Le escuchamos, respondemos sus preguntas y le ayudamos a entender el siguiente paso.</p><a href="es-contacto.html" class="btn btn-primary">Solicitar Consulta Gratis</a>&nbsp;<a href="tel:+17869105979" class="btn btn-white">Llamar (786) 910-5979</a></div></div></div></section>
 <footer class="site"><div class="wrap">
 <div class="fgrid">
@@ -291,6 +307,20 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
 </div>
 <div class="fbottom"><span>© 2026 DARTherapy ABA. Todos los derechos reservados.</span>
 <span>Dirigida por un BCBA · Bilingüe · Atención respetuosa de HIPAA</span></div></div></footer>
+<div class="modal-overlay" id="consult-modal" aria-hidden="true">
+<div class="modal" role="dialog" aria-modal="true" aria-label="Solicitar una consulta gratuita">
+<button class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+<h3>Solicitar una consulta gratuita</h3>
+<p class="form-note" style="margin-bottom:18px">Cuéntenos sobre su hijo/a y le responderemos en un día hábil.</p>
+<form action="#" method="post" novalidate>
+<div class="field two"><div><label>Nombre del padre / tutor</label><input type="text" name="name" required></div><div><label>Teléfono</label><input type="tel" name="phone" required></div></div>
+<div class="field two"><div><label>Correo electrónico</label><input type="email" name="email" required></div><div><label>Edad del niño/a</label><input type="text" name="child_age"></div></div>
+<div class="field two"><div><label>Servicio de interés</label><select name="service"><option>Terapia ABA en el Hogar</option><option>Terapia ABA Escolar</option><option>ABA Comunitario</option><option>Entrenamiento para Padres</option><option>Evaluación ABA y FBA</option><option>Aún no estoy seguro/a</option></select></div><div><label>Seguro</label><select name="insurance"><option>Aetna</option><option>Cigna</option><option>Blue Cross Blue Shield (BCBS)</option><option>Otro (no Medicaid)</option><option>Pago privado</option></select></div></div>
+<div class="field two"><div><label>Días preferidos</label><input type="text" name="days" placeholder="ej. Mañanas entre semana"></div><div><label>Idioma preferido</label><select name="language"><option>Español</option><option>Inglés</option><option>Cualquiera</option></select></div></div>
+<div class="field"><label>¿Algo más que debamos saber?</label><textarea name="message" rows="3"></textarea></div>
+<input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<button type="submit" class="btn btn-primary">Solicitar consulta</button>
+</form></div></div>
 <script>
 // DARTherapy ABA — shared nav interactions
 (function(){
@@ -311,6 +341,34 @@ footer .fdesc{font-size:.92rem;color:#9FB6B4;max-width:34ch;margin-top:14px}
         dd.style.opacity=vis?'':'1';
       }
     });
+  });
+})();
+
+// Consultation modal
+(function(){
+  var ov=document.getElementById('consult-modal');
+  if(!ov) return;
+  function open(e){ if(e) e.preventDefault(); ov.classList.add('open'); document.body.classList.add('modal-open'); }
+  function close(){ ov.classList.remove('open'); document.body.classList.remove('modal-open'); }
+  document.querySelectorAll('[data-open-consult]').forEach(function(b){ b.addEventListener('click',open); });
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  var c=ov.querySelector('.modal-close'); if(c) c.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+})();
+
+// Active nav highlight (works on folder + flat builds, EN + ES)
+(function(){
+  function key(u){ if(!u) return null; var a=document.createElement('a'); a.href=u;
+    var p=a.pathname.replace(/\/+$/,''); var seg=(p.split('/').pop()||'').replace(/\.html$/,'');
+    return seg==='index'?'':seg; }
+  var cur=key(location.href), path=location.pathname;
+  function match(k){ if(k==null) return false; if(k===cur) return true;
+    if(k && cur && cur.indexOf(k+'-')===0) return true;
+    if(k && path.indexOf('/'+k+'/')>-1) return true; return false; }
+  document.querySelectorAll('.menu>li').forEach(function(li){
+    var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
+    if(hit){ li.classList.add('is-active');
+      var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
   });
 })();
 
