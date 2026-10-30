@@ -220,6 +220,12 @@ body.modal-open{overflow:hidden}
 .menu>li.is-active>a::after,.menu>li.is-active>button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2.5px;border-radius:2px;background:var(--coral)}
 @media(max-width:760px){.menu>li.is-active>a::after,.menu>li.is-active>button::after{display:none}.menu>li.is-active>a,.menu>li.is-active>button{border-left:3px solid var(--coral)}}
 
+/* form success / error states */
+.form-success{background:var(--teal-tint);border:1px solid #bfe3e0;border-radius:var(--radius);padding:30px 26px;text-align:center}
+.form-success .fs-check{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;font-size:1.45rem;line-height:46px;margin:0 auto 14px;font-weight:700}
+.form-success p{margin:0;color:var(--ink);font-weight:600;font-size:1.02rem}
+.form-error{color:var(--coral-dark);font-weight:600;margin-top:12px}
+
 </style></head><body>
 <div class="topbar"><div class="wrap">
 <span>BCBA-led · Bilingual ABA therapy · Ages 2–18 · Broward, Miami-Dade & Palm Beach</span>
@@ -320,6 +326,33 @@ body.modal-open{overflow:hidden}
     var hit=[].some.call(li.querySelectorAll('a'),function(a){return match(key(a.getAttribute('href')));});
     if(hit){ li.classList.add('is-active');
       var t=li.querySelector('a,button'); if(t) t.setAttribute('aria-current','page'); }
+  });
+})();
+
+// FormSubmit AJAX forms (non-file forms submit without leaving the page)
+(function(){
+  var ENDPOINT='https://formsubmit.co/ajax/r.mehran@envisionmdrcm.com';
+  document.querySelectorAll('form[data-ajax]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var hp=f.querySelector('[name="_honey"]'); if(hp&&hp.value) return;
+      var btn=f.querySelector('[type=submit]'); var orig=btn?btn.innerHTML:'';
+      if(btn){btn.disabled=true;btn.innerHTML='Sending…';}
+      fetch(ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+        .then(function(r){return r.json();})
+        .then(function(){
+          var msg=f.getAttribute('data-thanks')||'Thank you! Your message has been sent.';
+          var box=document.createElement('div'); box.className='form-success';
+          box.innerHTML='<div class="fs-check">✓</div><p>'+msg+'</p>';
+          f.parentNode.replaceChild(box,f);
+        })
+        .catch(function(){
+          if(btn){btn.disabled=false;btn.innerHTML=orig;}
+          var err=f.querySelector('.form-error');
+          if(!err){err=document.createElement('p');err.className='form-error';f.appendChild(err);}
+          err.textContent='Sorry, something went wrong. Please call (786) 910-5979 or email daniel@dartherapyaba.com.';
+        });
+    });
   });
 })();
 
