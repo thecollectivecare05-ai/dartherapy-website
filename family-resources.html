@@ -252,6 +252,12 @@ body.modal-open{overflow:hidden}
 .foot-logo{display:inline-block;background:#fff;padding:10px 16px;border-radius:12px;line-height:0}
 .site.footer .brand-logo,footer .brand-logo{height:46px}
 
+/* photo gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:8px}
+.gal-item{display:block;border-radius:14px;overflow:hidden;aspect-ratio:1/1;box-shadow:var(--shadow-sm);background:var(--teal-tint)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.gal-item:hover img{transform:scale(1.06)}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "@id": "https://dartherapyaba.com/#business", "name": "DARTherapy ABA", "description": "Applied Behavior Analysis (ABA) therapy and parent training for children with autism and developmental disorders, led by a Board Certified Behavior Analyst (BCBA). In-home, school-based and community-based services across South Florida, in English and Spanish.", "url": "https://dartherapyaba.com/", "telephone": "+17869105979", "faxNumber": "+17869541809", "email": "daniel@dartherapyaba.com", "medicalSpecialty": "Applied Behavior Analysis", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "3339 NW 55th St", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33309", "addressCountry": "US"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Broward County, FL"}, {"@type": "AdministrativeArea", "name": "Miami-Dade County, FL"}, {"@type": "AdministrativeArea", "name": "Palm Beach County, FL"}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:30"}], "founder": {"@type": "Person", "name": "Daniel Rivas", "jobTitle": "Board Certified Behavior Analyst (BCBA)"}, "availableLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/dartherapy3/"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dartherapyaba.com/"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dartherapyaba.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Family Resources", "item": "https://dartherapyaba.com/family-resources/"}]}</script>
@@ -286,7 +292,7 @@ body.modal-open{overflow:hidden}
 <h1>Tools and support for your family</h1>
 <p class="lead" style="max-width:60ch">A growing library of practical resources — screening tools, support communities, workshops and funding help — to support your family at every stage.</p>
 </div></div></div>
-<section style="padding:20px 0 0"><div class="wrap" style="max-width:1050px"><img src="https://images.unsplash.com/photo-1532789339108-2ebc484efbf1?fm=jpg&q=70&w=1400&auto=format&fit=crop&ixlib=rb-4.1.0" alt="A parent and child reading together" style="width:100%;height:300px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow-sm)"></div></section>
+<section style="padding:26px 0 0"><div class="wrap" style="text-align:center"><img src="img-family.jpg" alt="A child enjoying a special character visit at DARTherapy" loading="lazy" style="max-width:600px;width:100%;height:auto;border-radius:18px;box-shadow:var(--shadow)"></div></section>
 <section><div class="wrap">
 <div class="center" style="max-width:60ch"><span class="eyebrow">Browse</span><h2>Resources by topic</h2></div>
 <div class="grid g4" style="margin-top:34px"><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div><h3>Getting-started guides</h3><p>Simple explainers on ABA, assessments and what to expect.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Insurance help</h3><p>How ABA coverage works in Florida and how to verify your plan.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.2 6C19 16.6 12 21 12 21z"/></svg></div><h3>Autism &amp; development</h3><p>Trusted information on autism and developmental milestones.</p></div><div class="card"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>South Florida resources</h3><p>Local support groups, schools and community organizations.</p></div></div>
@@ -313,6 +319,7 @@ body.modal-open{overflow:hidden}
 <li><a href="locations.html">Locations</a></li>
 <li><a href="insurance-funding.html">Insurance &amp; Funding</a></li>
 <li><a href="what-to-expect.html">What to Expect</a></li>
+<li><a href="gallery.html">Gallery</a></li>
 <li><a href="blog.html">Resources &amp; Blog</a></li>
 <li><a href="careers.html">Careers</a></li>
 </ul></div>
